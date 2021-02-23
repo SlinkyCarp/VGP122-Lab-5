@@ -9,14 +9,14 @@ private:
 	int numerator;
 	int denominator;
 public:
-	Rational(int , int ); // constructor
-	void reduced();
-	void addition(Rational);
-	void subtraction(Rational);
-	void multiplication(Rational);
-	void division(Rational);
-	void toString(char);
-	void toDouble(double);
+	Rational(int, int); // constructor
+	void reduced(int a, int b);
+	void addition(int aNum, int aDeno, int bNum, int bDeno);
+	void subtraction(int aNum, int aDeno, int bNum, int bDeno);
+	void multiplication(int aNum, int aDeno, int bNum, int bDeno);
+	void division(int aNum, int aDeno, int bNum, int bDeno);
+	void toString(int aNum, int aDeno);
+	void toDouble(int aNum, int aDeno);
 };
 
 

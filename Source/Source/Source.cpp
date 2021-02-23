@@ -40,14 +40,16 @@ int main()
 int main()
 {
 	Rational c(2, 6);
-
-	std::cout << c.reduced() << std::endl;
-	std::cout << c.addition() << std::endl;
-	std::cout << c.subtraction() << std::endl;
-	std::cout << c.multiplication() << std::endl;
-	std::cout << c.division() << std::endl;
-	std::cout << c.toDouble() << std::endl;
-
+	c.addition(2, 2, 6, 2);
+	std::cout << std::endl;
+	c.toString(4, 6);
+	std::cout << std::endl;
+	c.toDouble(3, 6);
+	std::cout << std::endl;
+	c.multiplication(2, 3, 8, 1);
+	std::cout << std::endl;
+	c.division(4, 6, 9, 2);
+	std::cout << std::endl;
 	return 0;
 }
 

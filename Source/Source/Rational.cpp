@@ -7,63 +7,60 @@ Rational::Rational(int num, int deno)
 	denominator = deno;
 }
 
-void Rational::reduced()
+void Rational::reduced(int a, int b)
 {
-	int gcd = 0;
-	int largest;
-	largest = numerator > denominator ? numerator : denominator;
-
-	int gcd = 0;
-
-	for (int i = 2; i <=largest; i++)
-		if (numerator % i == 0 && denominator % i == 0)
-		{
-			gcd = i;
-		}
-	if (gcd != 0)
+	int i = 2;
+	for (i = b * a; i > 1; i--)
 	{
-		numerator = numerator / gcd;
-		denominator = denominator / gcd;
+		if ((b % i == 0) && (a % i == 0))
+		{
+			a = a / i;
+			b = b / i;
+		}
 	}
-	
-	
 }
 
-void Rational::addition(Rational r)
+void Rational::addition(int aNum, int aDeno, int bNum, int bDeno)
 {
-	numerator = numerator + r.numerator;
-	denominator = denominator + r.denominator;
-	reduced();
+
+	int outputNum = aNum * bDeno + bNum * aDeno;
+	int outputDeno = bDeno * aDeno;
+	reduced(outputNum, outputDeno);
+	std::cout << outputNum << "/" << outputDeno << std::endl;
 }
 
-void Rational::subtraction(Rational r)
+void Rational::subtraction(int aNum, int aDeno, int bNum, int bDeno)
 {
-	numerator = numerator - r.numerator;
-	denominator = denominator - r.denominator;
-	reduced();
+	int outputNum = aNum * bDeno - bNum * aDeno;
+	int outputDeno = bDeno * aDeno;
+	reduced(outputNum, outputDeno);
+	std::cout << outputNum << "/" << outputDeno << std::endl;
 }
 
-void Rational::multiplication(Rational r)
+void Rational::multiplication(int aNum, int aDeno, int bNum, int bDeno)
 {
-	numerator = numerator * r.numerator;
-	denominator = denominator * r.denominator;
-	reduced();
+	int outputNum = aNum * bNum;
+	int outputDeno = aDeno * bDeno;
+	std::cout << outputNum << "/" << outputDeno << std::endl;
 }
 
-void Rational::division(Rational r)
+void Rational::division(int aNum, int aDeno, int bNum, int bDeno)
 {
-	numerator = numerator / r.numerator;
-	denominator = denominator / r.denominator;
-	reduced();
+	int outputNum = aNum * bNum;
+	int outputDeno = aDeno * bDeno;
+	reduced(outputNum, outputDeno);
+	std::cout << outputNum << "/" << outputDeno << std::endl;
 }
 
-void Rational::toString(char)
+void Rational::toString(int aNum, int aDeno)
 {
+	std::cout << aNum << "/" << aDeno << std::endl;
 }
 
-void Rational::toDouble(double)
+void Rational::toDouble(int aNum, int aDeno)
 {
-	double output;
-	output = static_cast<double>(numerator) / static_cast<double>(denominator);
-	std::cout << output << std::endl;
+	double outputNum = static_cast<double>(aNum);
+	double outputDeno = static_cast<double>(aDeno);
+	std::cout << outputNum << "/" << outputDeno << std::endl;
 }
+
