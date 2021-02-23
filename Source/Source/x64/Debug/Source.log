@@ -1,0 +1,10 @@
+﻿  Rational.cpp
+C:\Users\shara\OneDrive\Documents\TFS\Winter 2021\VGP122 - Programming Fundamentals 1\Labs\Lab 5\Source\Source\Rational.cpp(11,1): error C2556: 'void Rational::reduced(int)': overloaded function differs only by return type from 'int Rational::reduced(int)'
+C:\Users\shara\OneDrive\Documents\TFS\Winter 2021\VGP122 - Programming Fundamentals 1\Labs\Lab 5\Source\Source\Rational.h(13): message : see declaration of 'Rational::reduced'
+C:\Users\shara\OneDrive\Documents\TFS\Winter 2021\VGP122 - Programming Fundamentals 1\Labs\Lab 5\Source\Source\Rational.cpp(10,16): error C2371: 'Rational::reduced': redefinition; different basic types
+C:\Users\shara\OneDrive\Documents\TFS\Winter 2021\VGP122 - Programming Fundamentals 1\Labs\Lab 5\Source\Source\Rational.h(13): message : see declaration of 'Rational::reduced'
+C:\Users\shara\OneDrive\Documents\TFS\Winter 2021\VGP122 - Programming Fundamentals 1\Labs\Lab 5\Source\Source\Rational.cpp(16,6): error C2374: 'gcd': redefinition; multiple initialization
+C:\Users\shara\OneDrive\Documents\TFS\Winter 2021\VGP122 - Programming Fundamentals 1\Labs\Lab 5\Source\Source\Rational.cpp(12): message : see declaration of 'gcd'
+  SavingsAcc.cpp
+  Source.cpp
+  Generating Code...
