@@ -14,30 +14,30 @@ int main()
 
     std::cout << std::fixed << std::setprecision(2);
 
-    std::cout << "Account 1 Balance: " << account1.getBalance() << std::endl;
+    std::cout << "Account Balance: " << account1.getBalance() << std::endl;
     std::cout << "Saving Account Balance: " << account2.getBalance() << std::endl;
-  
+    std::cout << "Checking Account Balance: " << account3.getBalance() << std::endl;
+    std::cout << std::endl;
 
-    std::cout << "Amount Withdrawn from account 1: " << account1.debit(60.0) << std::endl;
+    std::cout << "Amount Withdrawn from account: " << account1.debit(60.0) << std::endl;
     std::cout << "Amount Withdrawn from Saving Account: " << account2.debit(60.0) << std::endl;
-   
-
-    std::cout << "Account 1 new Balance: " << account1.getBalance() << std::endl;
-    std::cout << "Saving Account new Balance: " << account2.getBalance() << std::endl;
+    std::cout << std::endl;
     
+    std::cout << "Account new Balance: " << account1.getBalance() << std::endl;
+    std::cout << "Saving Account new Balance: " << account2.getBalance() << std::endl;
+    std::cout << std::endl;
 
-    std::cout << "Amount deposited into account 1: " << account1.credit(0.0) << std::endl;
+    std::cout << "Amount deposited into account: " << account1.credit(0.0) << std::endl;
     std::cout << "Amount deposited into Saving Account: " << account2.credit(50.0) << std::endl;
-   
+     std::cout << std::endl;
 
-    std::cout << "Account 1 new Balance: " << account1.getBalance() << std::endl;
+    std::cout << "Account new Balance: " << account1.getBalance() << std::endl;
     std::cout << "Saving Account new Balance: " << account2.getBalance() << std::endl;
     
 
     double interestEarned = account2.calculateInterest();
     std::cout << "Interest earned on Saving Account: " << interestEarned << std::endl;
     account2.credit(interestEarned);
-
     std::cout << "Saving Account new Balance: " << account2.getBalance() << std::endl;
 };
 
