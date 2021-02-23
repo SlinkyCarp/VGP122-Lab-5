@@ -10,7 +10,7 @@ private:
 	int denominator;
 public:
 	Rational(int, int); // constructor
-	void reduced(int a, int b);
+	void reduced(int& num, int& deno);
 	void addition(int aNum, int aDeno, int bNum, int bDeno);
 	void subtraction(int aNum, int aDeno, int bNum, int bDeno);
 	void multiplication(int aNum, int aDeno, int bNum, int bDeno);

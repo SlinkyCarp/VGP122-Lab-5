@@ -3,19 +3,29 @@
 
 Rational::Rational(int num, int deno)
 {
+	
+	for (int i = deno * num; i > 1; i--)
+	{
+		if ((deno % i == 0) && (num % i == 0))
+		{
+			num = num / i;
+			deno = deno / i;
+		}
+	}
+	
 	numerator = num;
 	denominator = deno;
 }
 
-void Rational::reduced(int a, int b)
+void Rational::reduced(int &num, int &deno)
 {
-	int i = 2;
-	for (i = b * a; i > 1; i--)
+	
+	for (int i = deno * num; i > 1; i--)
 	{
-		if ((b % i == 0) && (a % i == 0))
+		if ((deno % i == 0) && (num % i == 0))
 		{
-			a = a / i;
-			b = b / i;
+			num = num / i;
+			deno = deno / i;
 		}
 	}
 }

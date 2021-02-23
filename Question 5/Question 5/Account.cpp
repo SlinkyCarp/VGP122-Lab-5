@@ -1,5 +1,7 @@
 #include "Definitions.h"
 #include "Account.h"
+#include "SavingsAccount.h"
+#include "SavingsAccount.h"
 
 Account::Account(double initialBalance)
 {
@@ -20,15 +22,17 @@ int Account::credit(double amount)
 
 bool Account::debit(double amount)
 {
-	if (amount > balance)
+	if (amount < balance)
 	{
-		std::cout << "Amount is greater than balance. Invalid Entry" << std::endl;
-		return false;
+		
+		balance = balance - amount;
+		return balance;
 	}
 	else
 	{
-		balance = balance - amount;
-		return balance;
+		
+		std::cout << "Amount is greater than balance. Invalid Entry" << std::endl;
+		return false;
 	}
 	
 }

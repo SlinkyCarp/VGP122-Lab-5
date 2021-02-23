@@ -40,5 +40,5 @@ double CheckingAccount::chargeFee()
 {
 	Account::setBalance(getBalance() - transactionFee);
 	std::cout << "transaction fee charged " << transactionFee << std::endl;
-	return 0;
+	return getBalance();
 }

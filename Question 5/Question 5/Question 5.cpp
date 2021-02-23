@@ -10,7 +10,7 @@ int main()
 {
     Account account1(2000.00); //creating objects
     SavingAccount account2(40.0, .03); //creating objects
-    CheckingAccount account3(80.0, 1.0); //creating objects
+    CheckingAccount account3(80.0, 10.0); //creating objects
 
     std::cout << std::fixed << std::setprecision(2);
 
@@ -19,8 +19,9 @@ int main()
     std::cout << "Checking Account Balance: " << account3.getBalance() << std::endl;
     std::cout << std::endl;
 
-    std::cout << "Amount Withdrawn from account: " << account1.debit(60.0) << std::endl;
-    std::cout << "Amount Withdrawn from Saving Account: " << account2.debit(60.0) << std::endl;
+    std::cout << "Amount Withdrawn from account: " << account1.debit(20.0) << std::endl;
+    std::cout << "Amount Withdrawn from Saving Account: " << account2.debit(20.0) << std::endl;
+    std::cout << "Amount Withdrawn from Checking Account: " << account3.debit(20.0) << std::endl;
     std::cout << std::endl;
     
     std::cout << "Account new Balance: " << account1.getBalance() << std::endl;
